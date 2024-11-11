@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RepoAnalyzer from '../components/RepoAnalyzer.svelte';
+---
+
+<Layout title="Student Code Analyzer">
+  <main class="min-h-screen bg-gradient-to-b from-pink-50 to-white">
+    <div class="container mx-auto px-4 py-12 max-w-3xl">
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">
+          Student Code Analyzer
+        </h1>
+        <p class="text-gray-600 mb-8">
+          Enter a GitHub repository URL to analyze the code quality and get insights into technical abilities.
+        </p>
+        <RepoAnalyzer client:load />
+      </div>
+    </div>
+  </main>
+</Layout>
